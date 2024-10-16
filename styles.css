@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --Font-size: 15px;
+
+  /* - Family: [League Spartan]
+     - Weights: 400, 500, 700 */
+}
+
+body {
+  background-color: white;
+}
+
+.container {
+  margin: 75px auto 100px;
+  width: min(90%, 325px);
+  font-family: "League Spartan";
+}
+
+.container__title {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 25px;
+  line-height: 0.75;
+}
+
+.container__text {
+  max-width: 87%;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: var(--Dark-Grayish-Magenta);
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--Font-size);
+}
+
+.container__ratings-box {
+  padding: 40px 0;
+}
+
+.rate {
+  padding: 16px 0;
+  background-color: var(--Light-Grayish-Magenta);
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.rate:nth-child(2) {
+  margin: 16px auto;
+}
+
+.stars {
+  margin: 0 auto;
+  width: 125px;
+  height: 32px;
+  padding-bottom: 16px;
+  background-image: url(./images/icon-star.svg);
+  background-repeat: repeat-x;
+}
+
+.card {
+  background-color: var(--Very-Dark-Magenta);
+  padding: 40px 32px;
+  border-radius: 10px;
+}
+
+.card:nth-child(2) {
+  margin: 16px 0;
+}
+
+.card__info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.info__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+  margin-bottom: 6px;
+}
+
+.info__profile .name {
+  color: white;
+  padding-bottom: 8px;
+  vertical-align: middle;
+}
+
+.info__profile .type {
+  color: var(--Soft-Pink);
+}
+
+.info__avatar img {
+  max-width: 100%;
+}
+
+.card__text {
+  line-height: 1.5;
+  color: var(--Light-Grayish-Magenta);
+  font-size: var(--Font-size);
+  font-weight: 400;
+  max-width: 90%;
+}
+
+@media (min-width: 825px) {
+  .container {
+    width: min(95%, 1110px);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container__body {
+    max-width: 34%;
+  }
+  .container__title {
+    max-width: 300px;
+  }
+  .container__text {
+    max-width: 100%;
+  }
+  .container__title,
+  .container__text {
+    text-align: left;
+    margin: 0;
+  }
+  .container__cards-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rate {
+    width: 440px;
+    margin: 0;
+    padding: 16px 0;
+    background-color: var(--Light-Grayish-Magenta);
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    text-align: left;
+    border-radius: 10px;
+  }
+  .rate:nth-child(1) {
+    transform: translateX(-80px);
+  }
+  .rate:nth-child(2) {
+    transform: translateX(-40px);
+  }
+  .stars {
+    display: inline-block;
+    padding-bottom: 0;
+    height: 16px;
+    margin: 0 32px;
+  }
+  .card {
+    max-width: 350px;
+    height: 235px;
+    padding: 2.77vw 2.15vw;
+  }
+  .card:nth-child(2) {
+    margin: 0 32px;
+    transform: translateY(20px);
+  }
+  .card:nth-child(3) {
+    transform: translateY(40px);
+  }
+}
